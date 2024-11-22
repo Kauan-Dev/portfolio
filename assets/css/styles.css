@@ -221,10 +221,6 @@ section {
       color: var(--color-primary);
     }
   }
-
-  .discord-icon {
-    height: 36px;
-  }
 }
 
 .services {
@@ -483,10 +479,6 @@ footer {
     svg {
       width: 26px;
       height: 26px;
-    }
-
-    .discord-icon {
-      width: 34px;
     }
   }
 
