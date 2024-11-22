@@ -37,9 +37,19 @@ document.addEventListener('DOMContentLoaded', () => {
   // Inicializa o tema ao carregar a página
   loadTheme();
 
-  // Adiciona os ouvintes de evento para os ícones
-  darkModeIcon.addEventListener('click', toggleTheme);
-  lightModeIcon.addEventListener('click', toggleTheme);
+  // Adiciona eventos de clique e Enter aos ícones
+  function addEventListeners(icon) {
+    icon.addEventListener('click', toggleTheme);
+    icon.addEventListener('keydown', (event) => {
+      if (event.key === 'Enter' || event.keyCode === 13) {
+        toggleTheme();
+      }
+    });
+    icon.setAttribute('tabindex', '0'); // Garante que o ícone seja focável
+  }
+
+  addEventListeners(darkModeIcon);
+  addEventListeners(lightModeIcon);
 
   // Verifica se o usuário está usando o tema escuro
   const preferDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");

@@ -324,7 +324,7 @@ section {
     }
   }
 
-  &:hover .skill-card-inner {
+  &:hover .skill-card-inner, &:focus .skill-card-inner {
     transform: rotateY(180deg);
   }
 }
