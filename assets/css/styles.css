@@ -115,6 +115,7 @@ a {
   border-radius: 6px;
   cursor: pointer;
   user-select: none;
+  transition: 500ms;
 
   &:hover {
     background-color: var(--cta-color-hover) !important;
