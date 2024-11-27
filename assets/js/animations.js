@@ -2,7 +2,7 @@ const scrollRevealOptions = {
     duration: 800,
     distance: '50px',
     easing: 'ease-in-out',
-    viewFactor: 0.3,
+    viewFactor: window.innerWidth <= 1024 ? 0.2 : 0.5,
 };
 
 const animations = [
