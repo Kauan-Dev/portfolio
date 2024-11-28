@@ -6,20 +6,21 @@ const scrollRevealOptions = {
 };
 
 const animations = [
-    { selector: '.top', origin: 'top', duration: 800 },
-    { selector: '.right', origin: 'right', duration: 1000 },
-    { selector: '.bottom', origin: 'bottom', duration: 800 },
-    { selector: '.left', origin: 'left', duration: 1000 },
-    { selector: '.top-1000', origin: 'top', duration: 1000 },
-    { selector: '.top-1400', origin: 'top', duration: 1400 },
-    { selector: '.top-1800', origin: 'top', duration: 1800 },
+    { selector: '.top', origin: 'top', duration: 800, distance: '50px'},
+    { selector: '.right', origin: 'right', duration: 1000, distance: '50px' },
+    { selector: '.bottom', origin: 'bottom', duration: 800, distance: '50px' },
+    { selector: '.left', origin: 'left', duration: 1000, distance: '50px' },
+    { selector: '.top-1000', origin: 'top', duration: 1000, distance: '10px' },
+    { selector: '.top-1400', origin: 'top', duration: 1400, distance: '10px' },
+    { selector: '.top-1800', origin: 'top', duration: 1800, distance: '10px' },
 ];
 
-animations.forEach(({ selector, origin, duration }) => {
+animations.forEach(({ selector, origin, duration, distance}) => {
     ScrollReveal().reveal(selector, {
         ...scrollRevealOptions,
         origin,
         duration,
+        distance,
     });
 });
 
